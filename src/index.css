@@ -1,25 +1,25 @@
 /* ── 阿里巴巴普惠体 2.0 ── */
 @font-face {
   font-family: 'Alibaba PuHuiTi';
-  src: url('/阿里巴巴普惠体 2.0/Alibaba_PuHuiTi_2.0_55_Regular_55_Regular.ttf') format('truetype');
+  src: url('/阿里巴巴普惠体 2.0/Alibaba_PuHuiTi_2.0_55_Regular_55_Regular.woff2') format('woff2');
   font-weight: 400;
   font-display: swap;
 }
 @font-face {
   font-family: 'Alibaba PuHuiTi';
-  src: url('/阿里巴巴普惠体 2.0/Alibaba_PuHuiTi_2.0_65_Medium_65_Medium.ttf') format('truetype');
+  src: url('/阿里巴巴普惠体 2.0/Alibaba_PuHuiTi_2.0_65_Medium_65_Medium.woff2') format('woff2');
   font-weight: 500;
   font-display: swap;
 }
 @font-face {
   font-family: 'Alibaba PuHuiTi';
-  src: url('/阿里巴巴普惠体 2.0/Alibaba_PuHuiTi_2.0_75_SemiBold_75_SemiBold.ttf') format('truetype');
+  src: url('/阿里巴巴普惠体 2.0/Alibaba_PuHuiTi_2.0_75_SemiBold_75_SemiBold.woff2') format('woff2');
   font-weight: 600;
   font-display: swap;
 }
 @font-face {
   font-family: 'Alibaba PuHuiTi';
-  src: url('/阿里巴巴普惠体 2.0/Alibaba_PuHuiTi_2.0_55_Regular_85_Bold.ttf') format('truetype');
+  src: url('/阿里巴巴普惠体 2.0/Alibaba_PuHuiTi_2.0_55_Regular_85_Bold.woff2') format('woff2');
   font-weight: 700;
   font-display: swap;
 }
