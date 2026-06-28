@@ -306,7 +306,7 @@ export default function ProjectTemplate({ title, subtitle, banner, content = [],
             </div>
           }
         >
-          <img src={asset(banner)} alt={`${title} banner`} className="w-full h-full object-contain rounded-lg" />
+          <img src={banner} alt={`${title} banner`} className="w-full h-full object-contain rounded-lg" />
         </ContainerScroll>
       ) : gridscanBanner ? (
         <Project6Banner />
@@ -314,7 +314,7 @@ export default function ProjectTemplate({ title, subtitle, banner, content = [],
         <Project5Banner />
       ) : banner ? (
         <div className="w-full relative z-10">
-          <img src={asset(banner)} alt={`${title} banner`} className="w-full h-auto block" />
+          <img src={banner} alt={`${title} banner`} className="w-full h-auto block" />
         </div>
       ) : null}
 
@@ -509,7 +509,7 @@ export default function ProjectTemplate({ title, subtitle, banner, content = [],
               {section.image && (
                 <section id={section.id} className="scroll-mt-10">
                   <h2 className="text-base tracking-wider text-center mb-6" style={pageBg ? { color: '#fff' } : undefined}>{section.label}</h2>
-                  <img src={asset(section.image)} alt={section.label} className="w-full h-auto block" loading={i === 0 ? 'eager' : 'lazy'} />
+                  <img src={section.image} alt={section.label} className="w-full h-auto block" loading={i === 0 ? 'eager' : 'lazy'} />
                 </section>
               )}
             </div>
@@ -525,7 +525,7 @@ export default function ProjectTemplate({ title, subtitle, banner, content = [],
               color={folder.color || '#8C9CCA'}
               size={folder.size || 2}
               items={folder.items.map((src, i) => (
-                <img key={i} src={asset(src)} alt={`card-${i + 1}`} loading="lazy" />
+                <img key={i} src={src} alt={`card-${i + 1}`} loading="lazy" />
               ))}
             />
           </div>
@@ -539,7 +539,7 @@ export default function ProjectTemplate({ title, subtitle, banner, content = [],
           <div className="flex gap-6 justify-center">
             {threeViews.map((src, i) => (
               <div key={i} className="flex-1 max-w-[48%]">
-                <img src={asset(src)} alt={`三视图 ${i + 1}`} className="w-full h-auto block" loading="lazy" />
+                <img src={src} alt={`三视图 ${i + 1}`} className="w-full h-auto block" loading="lazy" />
               </div>
             ))}
           </div>
@@ -550,7 +550,7 @@ export default function ProjectTemplate({ title, subtitle, banner, content = [],
       {modelingImage && (
         <div className="w-full max-w-4xl mx-auto px-8 relative z-10 flex flex-col items-center" style={{ marginTop: '60px' }}>
           <h2 className="text-base tracking-wider text-center mb-6" style={pageBg ? { color: '#fff' } : undefined}>{modelingImage.label}</h2>
-          <img src={asset(modelingImage.src)} alt={modelingImage.label} className="w-full h-auto block" loading="lazy" style={{ mixBlendMode: pageBg ? 'lighten' : undefined, width: '42%', margin: '0 auto'}} />
+          <img src={modelingImage.src} alt={modelingImage.label} className="w-full h-auto block" loading="lazy" style={{ mixBlendMode: pageBg ? 'lighten' : undefined, width: '42%', margin: '0 auto'}} />
         </div>
       )}
 
@@ -567,7 +567,7 @@ export default function ProjectTemplate({ title, subtitle, banner, content = [],
         <div className="w-full max-w-5xl mx-auto px-8 pb-20 relative z-10" style={{ marginTop: '60px' }}>
           <h2 className="text-base tracking-wider text-center mb-6" style={pageBg ? { color: '#fff' } : undefined}>{poster.label}</h2>
           <div className="rounded-lg overflow-hidden" style={{ boxShadow: '0 4px 24px rgba(0,0,0,0.3)' }}>
-            <img src={asset(poster.src)} alt={poster.label} className="w-full h-auto block" loading="lazy" />
+            <img src={poster.src} alt={poster.label} className="w-full h-auto block" loading="lazy" />
           </div>
         </div>
       )}
@@ -608,7 +608,7 @@ export default function ProjectTemplate({ title, subtitle, banner, content = [],
                     transition={{ duration: 0.5, ease: 'easeOut' }}
                   >
                     <div className={noSidebar ? '' : 'bg-white rounded-md shadow-sm overflow-hidden'}>
-                      <img src={asset(section.image)} alt={section.label} className="w-full h-auto block" loading="eager" onError={(e) => { e.target.src = e.target.src }} />
+                      <img src={section.image} alt={section.label} className="w-full h-auto block" loading="eager" onError={(e) => { e.target.src = e.target.src }} />
                     </div>
                   </motion.section>
                 )}
@@ -623,7 +623,7 @@ export default function ProjectTemplate({ title, subtitle, banner, content = [],
                     transition={{ duration: 0.5, ease: 'easeOut' }}
                   >
                     <div className={noSidebar ? '' : 'bg-white rounded-md shadow-sm overflow-hidden'}>
-                      <img src={asset(child.image)} alt={child.label} className="w-full h-auto block" loading="lazy" onError={(e) => { e.target.src = e.target.src }} />
+                      <img src={child.image} alt={child.label} className="w-full h-auto block" loading="lazy" onError={(e) => { e.target.src = e.target.src }} />
                     </div>
                   </motion.section>
                 ))}
@@ -648,7 +648,7 @@ export default function ProjectTemplate({ title, subtitle, banner, content = [],
                     viewport={{ once: true, margin: '-80px' }}
                     transition={{ duration: 0.5, ease: 'easeOut' }}
                   >
-                    <img src={asset(section.image)} alt={section.label} className="w-full h-auto block" loading="eager" onError={(e) => { e.target.src = e.target.src }} />
+                    <img src={section.image} alt={section.label} className="w-full h-auto block" loading="eager" onError={(e) => { e.target.src = e.target.src }} />
                   </motion.section>
                 )}
                 {section.children && section.children.map((child) => (
@@ -661,7 +661,7 @@ export default function ProjectTemplate({ title, subtitle, banner, content = [],
                     viewport={{ once: true, margin: '-80px' }}
                     transition={{ duration: 0.5, ease: 'easeOut' }}
                   >
-                    <img src={asset(child.image)} alt={child.label} className="w-full h-auto block" loading="eager" onError={(e) => { e.target.src = e.target.src }} />
+                    <img src={child.image} alt={child.label} className="w-full h-auto block" loading="eager" onError={(e) => { e.target.src = e.target.src }} />
                   </motion.section>
                 ))}
               </div>
