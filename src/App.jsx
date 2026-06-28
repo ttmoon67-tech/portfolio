@@ -1,6 +1,14 @@
+import { lazy, Suspense } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import HomePage from './pages/HomePage'
-import ProjectPage from './pages/ProjectPage'
+
+const ProjectPage = lazy(() => import('./pages/ProjectPage'))
+
+const Loading = () => (
+  <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#f8f7fa' }}>
+    <p style={{ fontSize: '14px', color: '#999' }}>Loading...</p>
+  </div>
+)
 
 function App() {
   return (
@@ -23,17 +31,19 @@ function App() {
       </div>
 
       {/* Routes */}
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/project/:id" element={<ProjectPage />} />
-        <Route path="*" element={
-          <div style={{minHeight:'100vh',background:'#F5F5F5',display:'flex',alignItems:'center',justifyContent:'center'}}>
-            <p style={{fontSize:'20px',color:'#333'}}>
-            404 — Path: {typeof window !== 'undefined' ? window.location.pathname : 'N/A'}
-          </p>
-          </div>
-        } />
-      </Routes>
+      <Suspense fallback={<Loading />}>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/project/:id" element={<ProjectPage />} />
+          <Route path="*" element={
+            <div style={{minHeight:'100vh',background:'#F5F5F5',display:'flex',alignItems:'center',justifyContent:'center'}}>
+              <p style={{fontSize:'20px',color:'#333'}}>
+              404 — Path: {typeof window !== 'undefined' ? window.location.pathname : 'N/A'}
+            </p>
+            </div>
+          } />
+        </Routes>
+      </Suspense>
     </div>
   )
 }
