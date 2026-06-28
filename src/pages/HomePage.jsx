@@ -1,6 +1,7 @@
 import { useState, useCallback, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
+import { asset } from '@/lib/utils'
 import {
   HoverSlider,
   TextStaggerHover,
@@ -10,31 +11,31 @@ import {
 
 const cards = [
   {
-    src: '/resume-1.png',
+    src: asset('resume-1.png'),
     alt: '简历',
     style: { width: '22%', marginLeft: '-2%', marginTop: '-6%', zIndex: 11, rotate: '-6deg' },
     className: 'h-auto',
   },
   {
-    src: '/装饰卡片.png',
+    src: asset('装饰卡片.png'),
     alt: '装饰卡片',
     style: { width: '12%', marginLeft: '-2%', marginTop: '-3%', zIndex: 13, rotate: '-4deg' },
     className: 'h-auto',
   },
   {
-    src: '/项目2.png',
+    src: asset('项目2.png'),
     alt: '项目',
     style: { width: '24%', marginLeft: '0%', marginTop: '-4%', zIndex: 12, rotate: '7deg' },
     className: 'h-auto',
   },
   {
-    src: '/前言.png',
+    src: asset('前言.png'),
     alt: '前言',
     style: { width: '18%', marginLeft: '-1%', marginTop: '-1%', zIndex: 14, rotate: '3deg' },
     className: 'h-auto',
   },
   {
-    src: '/粉色标签.png',
+    src: asset('粉色标签.png'),
     alt: '粉色标签',
     style: { width: '3.6%', marginLeft: '12%', marginTop: '-6%', zIndex: 15, rotate: '20deg' },
     className: 'h-auto',
@@ -127,7 +128,7 @@ export default function HomePage() {
     <div style={{ display: 'grid' }}>
       {/* Full background — 完整显示，可滚动到底部 */}
       <img
-        src="/bg-8.png"
+        src={asset('bg-8.png')}
         alt="背景"
         className="h-auto block"
         style={{ gridArea: '1 / 1', width: '100vw' }}
@@ -149,7 +150,7 @@ export default function HomePage() {
 
           {/* Layer 1: 信封1 */}
           <img
-            src="/信封1.png"
+            src={asset('信封1.png')}
             alt="信封底部"
             className="w-full h-full object-contain object-bottom"
             style={{ gridRow: 1, gridColumn: 1 }}
@@ -197,7 +198,7 @@ export default function HomePage() {
 
           {/* Layer 3: 信封2 */}
           <motion.img
-            src="/信封2.png"
+            src={asset('信封2.png')}
             alt="信封顶层"
             style={{
               gridRow: 1,
@@ -269,7 +270,7 @@ export default function HomePage() {
               {/* --- Left side: tilted decorative card --- */}
               <div className="absolute top-1/2 -translate-y-1/2 z-10" style={{ width: '432px', left: '-30px' }}>
                 <motion.img
-                  src="/项目2.png"
+                  src={asset('项目2.png')}
                   alt="项目卡片"
                   className="w-full h-auto shadow-xl"
                   style={{ rotate: '-6deg', transformOrigin: 'center center' }}
@@ -290,7 +291,7 @@ export default function HomePage() {
                   borderRadius: '2px',
                   backgroundColor: 'var(--card)',
                   backgroundImage: [
-                    `url('/白纸.png')`,
+                    `url('${asset('白纸.png')}')`,
                     // Subtle paper fiber lines
                     `repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(139,119,85,0.015) 2px, rgba(139,119,85,0.015) 3px)`,
                     `repeating-linear-gradient(90deg, transparent, transparent 3px, rgba(139,119,85,0.01) 3px, rgba(139,119,85,0.01) 4px)`,
@@ -363,7 +364,7 @@ export default function HomePage() {
                           <HoverSliderImage
                             key={p.id}
                             index={i}
-                            src={`/projects/project-${p.id}.png`}
+                            src={asset(`projects/project-${p.id}.png`)}
                             alt={p.title}
                           />
                         ))}
@@ -392,7 +393,7 @@ export default function HomePage() {
         )}
       </AnimatePresence>
       {/* Background music — 首次点击播放 */}
-      <audio ref={audioRef} src="/bgm.mp3" loop preload="auto" />
+      <audio ref={audioRef} src={asset('bgm.mp3')} loop preload="auto" />
 
     </div>
   )
