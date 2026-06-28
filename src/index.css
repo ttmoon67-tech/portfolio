@@ -1,0 +1,85 @@
+/* ── 阿里巴巴普惠体 2.0 ── */
+@font-face {
+  font-family: 'Alibaba PuHuiTi';
+  src: url('/阿里巴巴普惠体 2.0/Alibaba_PuHuiTi_2.0_55_Regular_55_Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Alibaba PuHuiTi';
+  src: url('/阿里巴巴普惠体 2.0/Alibaba_PuHuiTi_2.0_65_Medium_65_Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Alibaba PuHuiTi';
+  src: url('/阿里巴巴普惠体 2.0/Alibaba_PuHuiTi_2.0_75_SemiBold_75_SemiBold.ttf') format('truetype');
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'Alibaba PuHuiTi';
+  src: url('/阿里巴巴普惠体 2.0/Alibaba_PuHuiTi_2.0_95_ExtraBold_95_ExtraBold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+/* ── Theme ── */
+:root {
+  --card: #ffffff;
+  --ring: #8a79ab;
+  --input: #eae7f0;
+  --muted: #dcd9e3;
+  --accent: #e6a5b8;
+  --border: #cec9d9;
+  --radius: 0.5rem;
+  --popover: #ffffff;
+  --primary: #8a79ab;
+  --sidebar: #f1eff5;
+  --spacing: 0.25rem;
+  --secondary: #dfd9ec;
+  --background: #f8f7fa;
+  --foreground: #3d3c4f;
+  --destructive: #d95c5c;
+  --shadow-blur: 5px;
+  --shadow-color: hsl(0 0% 0%);
+  --sidebar-ring: #8a79ab;
+  --shadow-spread: 1px;
+  --sidebar-accent: #e6a5b8;
+  --sidebar-border: #d7d2e0;
+  --card-foreground: #3d3c4f;
+  --shadow-offset-x: 1px;
+  --shadow-offset-y: 2px;
+  --sidebar-primary: #8a79ab;
+  --muted-foreground: #6b6880;
+  --accent-foreground: #4b2e36;
+  --popover-foreground: #3d3c4f;
+  --primary-foreground: #f8f7fa;
+  --sidebar-foreground: #3d3c4f;
+  --secondary-foreground: #3d3c4f;
+  --destructive-foreground: #f8f7fa;
+  --sidebar-accent-foreground: #4b2e36;
+  --sidebar-primary-foreground: #f8f7fa;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  width: 100%;
+  max-width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: 'Alibaba PuHuiTi', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-weight: 400;
+  color: var(--foreground);
+  background: var(--background);
+}
+
+/* 信息层级：正文 Regular / 小标题 Medium / 大标题 SemiBold */
+h1 { font-weight: 600; }
+h2 { font-weight: 500; }
+p  { font-weight: 400; }

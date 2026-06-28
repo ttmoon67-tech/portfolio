@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm --version)",
+      "Bash(npm install *)",
+      "Bash(npx vite *)",
+      "Bash(curl -s http://localhost:5173)",
+      "Bash(kill %1)",
+      "Bash(npm run *)",
+      "Bash(curl -s \"http://localhost:5173/\")",
+      "Bash(curl -s \"http://localhost:5173/project-1\")",
+      "Bash(start http://localhost:5173/project/2)"
+    ]
+  }
+}
